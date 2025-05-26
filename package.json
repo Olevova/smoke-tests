@@ -1,0 +1,32 @@
+{
+  "name": "smokecj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:setup": "playwright test tests/auth.setup.ts",
+    "test:admin": "playwright test tests/admin-forms.spec.ts",
+    "test:ci": "playwright test --reporter=junit,html",
+    "test:teamcity": "playwright test --reporter=junit --output-dir=test-results",
+    "install:browsers": "playwright install",
+    "install:deps": "playwright install-deps",
+    "show:report": "playwright show-report",
+    "codegen": "playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.21"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}

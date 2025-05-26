@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "7449130C15C1C8DB0DCA51D54D8AE11D",
+      "domain": "app.colorjob.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}
