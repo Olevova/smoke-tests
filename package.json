@@ -14,7 +14,7 @@
     "test:admin": "playwright test tests/admin-forms.spec.ts",
     "test:ci": "playwright test --reporter=junit,html",
     "test:teamcity": "playwright test --reporter=junit --output-dir=test-results",
-    "install:browsers": "playwright install",
+    "install:browsers": "npx playwright install chromium",
     "install:deps": "playwright install-deps",
     "show:report": "playwright show-report",
     "codegen": "playwright codegen"
