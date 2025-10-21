@@ -5,7 +5,6 @@ import { users } from '../utils/users';
 import ProjectPage from '../pages/project.page';
 import {URLS} from '../utils/config'; 
 
-// test.use({ storageState: 'utils/state/superAdmin.json' })
 
 test('Check open and verify Company form by Super Admin', async({page})=>{
     const company = new CompanyPage(page);
@@ -13,7 +12,6 @@ test('Check open and verify Company form by Super Admin', async({page})=>{
 
     await login.performAuthentication(users.superadmin);
     await login.checkUserMenu();
-    // await company.goToCompaniesPage(URLS.DASHBOARD);
     await company.goToCompanyPageBySidebarLink();
     await company.openCompanyForm();
     await company.verifyCompanyFormSnapshot();
@@ -26,7 +24,6 @@ test('Check open and verify Project form by Super Admin', async({page})=>{
     const login = new LoginPage(page);
 
     await login.performAuthentication(users.superadmin);
-    // await login.checkUserMenu();
     await project.goToProjectPage(URLS.COMPANY_DASHBOARD(32));
     await project.openCreateProjectForm();
     await project.verifyProjectFormSnapshot();

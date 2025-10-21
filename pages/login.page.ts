@@ -1,7 +1,7 @@
 import { Page, Locator, expect } from "@playwright/test";
 import { BasePage } from "./base.page";
 import { User } from "../utils/users";
-import {TIMEOUTS} from '../utils/config'
+import { TIMEOUTS } from "../utils/config";
 
 export default class LoginPage extends BasePage {
   private loginForm: Locator;
@@ -50,7 +50,7 @@ export default class LoginPage extends BasePage {
   async performAuthentication(params: User) {
     await this.navigateToPage("/login");
     await this.waitForPageLoad();
-    await expect(this.versionText).toHaveText(/^V[\dA-Za-z.\-]+$/, { timeout: TIMEOUTS.LONG});
+    await expect(this.versionText.first()).toHaveText(/^((UI - )?V[\dA-Za-z.\-]+)$/, { timeout: TIMEOUTS.LONG });
     await this.fillLoginForm(params);
     await this.page.waitForTimeout(500);
     await this.submitLogin();
@@ -63,7 +63,7 @@ export default class LoginPage extends BasePage {
     await this.profileUserBtn.click();
     await expect(this.profileLink).toBeVisible();
     await expect(this.logOutLink).toBeVisible();
-    await expect(this.logOutLink).toHaveText("Log out", { timeout: TIMEOUTS.DEFAULT});
+    await expect(this.logOutLink).toHaveText("Log out", { timeout: TIMEOUTS.DEFAULT });
   }
 
   async logOut() {
@@ -76,13 +76,13 @@ export default class LoginPage extends BasePage {
     await this.navigateToPage("/login");
     await this.forgotPassword.click();
     await expect(this.forgotPasswordPage).toMatchAriaSnapshot(`
-    - img
-    - heading "Forgot Password" [level=1]
-    - text: Email
-    - textbox "Email"
-    - button "Submit"
-    - link "Cancel":
-      - /url: /login
-    `);
+      - img
+      - heading "Forgot Password" [level=1]
+      - text: Email
+      - textbox "Email"
+      - button "Submit"
+      - link "Cancel":
+        - /url: /login
+      `);
   }
 }

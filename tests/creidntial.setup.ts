@@ -3,7 +3,7 @@ import LoginPage from '../pages/login.page';
 import { users } from '../utils/users';
 
 const authUsers = [
-     { name: 'Super Admin', user: users.superadmin },
+    //  { name: 'Super Admin', user: users.superadmin },
    { name: 'Manager', user: users.manager },
   { name: 'Member', user: users.member },
   { name: 'Viewer', user: users.viewer },

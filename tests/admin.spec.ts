@@ -21,7 +21,8 @@ test('Check open and verify Project by Admin', async({page})=>{
 test('Check open and verify Invite form by admin', async({page})=>{
     const user = new UserPage(page);
 
-    await user.goToInviteUserPage(URLS.USER_DASHBOARD(32));
+    // await user.goToInviteUserPage(URLS.USER_DASHBOARD(32));
+    await user.goToInviteUserPage(URLS.COMPANY_DASHBOARD(32));
     await user.openInviteUserForm();
     await user.cancelUserInvitation();
 

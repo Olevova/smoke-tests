@@ -13,7 +13,7 @@ const allUsers: Record<string, User> = {
   manager: {name:'Vova PM', email: 'olevova1983@gmail.com', password: '222222' },
   member: {name:'Vova SU', email: 'olevova@ukr.net', password: '222222' },
   viewer:{name:'Vova Vi', email: 'olevova1983+viewer@gmail.com', password: '222222'},
-  superadmin: {name:'Ben', email: 'ben@colorjob.com', password: process.env.SUPERADMIN_PASSWORD || '' },
+  superadmin: {name:'Vova', email: 'volodymyr_o+3@terenbro.com', password: process.env.SUPERADMIN_PASSWORD || '' },
 };
 
 export const users = allUsers;

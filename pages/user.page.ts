@@ -9,7 +9,7 @@ export default class UserPage extends BasePage {
 
     private userForm: FormMixin;
     private userNavigation: NavigationMixin;
-    // private sideBarUserLink: Locator;
+    private sideBarUserLink: Locator;
     // private inviteUserBtn: Locator;
     // private cancelCreationBtn: Locator;
     // private formInviteUserHeader: Locator;
@@ -19,7 +19,7 @@ constructor(page:Page){
     super(page);
     this.userForm = new FormMixin(page,SELECTORS.FORMS.USER_INVITE, 'Invite new user Available' );
     this.userNavigation = new NavigationMixin(page, "Users", 'Invite new user');
-    // this.sideBarUserLink = page.getByRole('link', { name: 'Users', exact: true });
+    this.sideBarUserLink = page.locator('#linkUsersInProject');
     // this.inviteUserBtn = page.getByRole('button', { name: 'Invite new user' });
     // this.cancelCreationBtn = page.getByRole('button', { name: 'Cancel' });
     // this.formInviteUserHeader =  page.getByText('Invite new user Available');
@@ -27,9 +27,9 @@ constructor(page:Page){
 }
 
 async goToInviteUserPage(url:string){
-      await this.userNavigation.navigateToSection(url)
-  //  await this.navigateToPage(url);
-  //  await this.sideBarUserLink.click();
+      // await this.userNavigation.navigateToSection(url)
+   await this.navigateToPage(url);
+   await this.sideBarUserLink.click();
   //  await expect(this.inviteUserBtn).toBeVisible(); 
 }
 

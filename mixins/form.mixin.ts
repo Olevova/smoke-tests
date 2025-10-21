@@ -20,8 +20,11 @@ export class FormMixin {
   }
 
   async cancelFormCreation(){
+    await expect(this.cancelButton).toBeVisible();
     await this.cancelButton.click();
-    await expect(this.formContainer).toBeHidden({ timeout: TIMEOUTS.DEFAULT });
+    // await expect(this.formContainer).toBeHidden({ timeout: TIMEOUTS.DEFAULT });
+    await expect(this.formContainer).not.toBeVisible({ timeout: TIMEOUTS.DEFAULT });
+    
   }
 
   async verifyFormHeader(expectedText: string){

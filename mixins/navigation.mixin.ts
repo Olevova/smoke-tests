@@ -14,11 +14,13 @@ export class NavigationMixin {
 
   async navigateToSection(url: string){
     await this.page.goto(url);
+    await this.page.waitForTimeout(1000);
     await this.sideBarLink.click();
     await expect(this.createButton).toBeVisible({ timeout: TIMEOUTS.DEFAULT});
   }
 
   async clickSidebarLink(){
+    await this.page.waitForTimeout(1000);
     await this.sideBarLink.click();
     await expect(this.createButton).toBeVisible({ timeout: TIMEOUTS.DEFAULT});
   }

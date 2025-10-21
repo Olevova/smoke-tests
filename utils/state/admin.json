@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "JSESSIONID",
-      "value": "B51D7632235667F6DBEFF0351A74D730",
+      "value": "EEE3BFB964AECC77AE6FA88CF434C4F7",
       "domain": "app.colorjob.com",
       "path": "/",
       "expires": -1,
@@ -12,10 +12,10 @@
     },
     {
       "name": "remember_me",
-      "value": "dm9sb2R5bXlyX28lNDB0ZXJlbmJyby5jb206MTc0OTQ3OTQxNTA1NTpTSEEyNTY6MmYwY2FiYjUwMTM3Y2ZjMDAwYTRhMjBiNjNjNzRmOWRkNDk3MjU3ODlkOGFhOGMxMWZmYmY4ZWNjZWIwZmJmMA",
+      "value": "dm9sb2R5bXlyX28lNDB0ZXJlbmJyby5jb206MTc2MjI1NzAwNzYyNDpTSEEyNTY6ODY5NTEwMjQxYjlkZTIwN2M5MjkzZGFmOGY5OTg4NzBjYWRhZjc4Yjc1OTQ5MGRjYzI4ZTBiMDM1NjYxODFkZQ",
       "domain": "app.colorjob.com",
       "path": "/",
-      "expires": 1749479414.930883,
+      "expires": 1762257009.550379,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"

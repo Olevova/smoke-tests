@@ -18,15 +18,15 @@ constructor(page:Page){
 }
 
 async goToProjectPage(url:string){
-  this.projNavigation.navigateToSection(url);
+ await this.projNavigation.navigateToSection(url);
 }
 
 async openCreateProjectForm() {
-  this.projForm.openForm(this.projNavigation.createButton);
+  await this.projForm.openForm(this.projNavigation.createButton);
 }
 
 async cancelProjectCreation() {
-  this.projForm.cancelFormCreation();
+ await this.projForm.cancelFormCreation();
 }
 
 async verifyProjectFormSnapshot() {
@@ -45,7 +45,7 @@ async verifyProjectFormSnapshot() {
     - textbox "ZIP Code"
     - text: Client Name
     - combobox "Client Name"
-    - text: Period (Optional) Start Date
+    - text: Estimated period Start Date
     - textbox "MM.DD.YY"
     - button:
       - img
