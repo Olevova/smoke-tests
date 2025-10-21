@@ -29,6 +29,7 @@ async cancelProjectCreation() {
  await this.projForm.cancelFormCreation();
 }
 
+
 async verifyProjectFormSnapshot() {
   await expect(this.projForm.formContainer).toMatchAriaSnapshot(`
     - button:
