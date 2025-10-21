@@ -31,6 +31,8 @@ async cancelProjectCreation() {
 
 async verifyProjectFormSnapshot() {
   await expect(this.projForm.formContainer).toMatchAriaSnapshot(`
+    - button:
+      - img
     - paragraph: Create Project
     - text: Project Name
     - textbox "Project Name"
@@ -53,7 +55,9 @@ async verifyProjectFormSnapshot() {
     - textbox "MM.DD.YY"
     - button:
       - img
-    `);
+    - button "Cancel"
+    - button "Next"
+  `);
 }
 
 }

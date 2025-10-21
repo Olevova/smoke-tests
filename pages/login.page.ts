@@ -72,17 +72,17 @@ export default class LoginPage extends BasePage {
     await expect(this.loginHeading).toHaveText("Welcome to Color Job", { timeout: TIMEOUTS.DEFAULT });
   }
 
-  async openForgotPasswordPage() {
-    await this.navigateToPage("/login");
-    await this.forgotPassword.click();
-    await expect(this.forgotPasswordPage).toMatchAriaSnapshot(`
-      - img
-      - heading "Forgot Password" [level=1]
-      - text: Email
-      - textbox "Email"
-      - button "Submit"
-      - link "Cancel":
-        - /url: /login
-      `);
-  }
+async openForgotPasswordPage() {
+  await this.navigateToPage("/login");
+  await this.forgotPassword.click();
+  await expect(this.forgotPasswordPage).toMatchAriaSnapshot(`
+    - img
+    - heading "Forgot Password" [level=1]
+    - text: Email
+    - textbox "Email"
+    - button "Submit"
+    - link "Cancel":
+      - /url: /login
+  `);
+}
 }

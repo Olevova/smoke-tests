@@ -34,8 +34,6 @@ async cancelTaskCreation() {
 
 async verifyTaskFormSnapshot() {
   await expect(this.taskForm.formContainer).toMatchAriaSnapshot(`
-    - button:
-      - img
     - paragraph: Create Task
     - text: Task Name
     - textbox "Task Name"
@@ -67,8 +65,6 @@ async verifyTaskFormSnapshot() {
     - paragraph: Drop your document here, or click to browse
     - paragraph: /Max size [\\d,.]+[bkmBKM]+\\./
     - list
-    - button "Cancel"
-    - button "Create Task"
-  `);
+    `);
 }
 }

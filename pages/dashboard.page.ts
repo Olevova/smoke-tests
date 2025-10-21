@@ -7,7 +7,7 @@ export class DashboardPage extends BasePage {
   readonly myOpenTasks: Locator;
   readonly activity: Locator;
   readonly colorBoardsParagraph: Locator;
-  readonly seeAllProjects: Locator;
+  // readonly seeAllProjects: Locator;
   readonly projectsParagraph:Locator;
   readonly openTasksParagraph:Locator;
 
